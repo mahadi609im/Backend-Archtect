@@ -86,7 +86,9 @@ https://www.youtube.com/watch?v=abc123
 
 - Rahim = Domain name (`youtube.com`)
 - ফোন নম্বর = IP address (`142.250.190.78`)
-- Contact list = DNS **DNS কীভাবে খোঁজে:**
+- Contact list = DNS
+
+**DNS কীভাবে খোঁজে:**
 
 1. প্রথমে Browser ও কম্পিউটারের **cache** দেখে।
 2. না পেলে **DNS Server**-কে জিজ্ঞেস করে।

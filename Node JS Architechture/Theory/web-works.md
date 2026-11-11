@@ -102,7 +102,9 @@ https://www.youtube.com/watch?v=abc123
   - `80` = HTTP
   - `443` = HTTPS
   - `3000` = Node.js development-এ প্রচলিত
-- `https` ব্যবহার করলে Browser স্বয়ংক্রিয়ভাবে `443` ধরে নেয়। **ফলাফল:** এখন
+- `https` ব্যবহার করলে Browser স্বয়ংক্রিয়ভাবে `443` ধরে নেয়।
+
+**ফলাফল:** এখন
   Client জানে Server কোথায় আছে (IP + Port)। এবার সংযোগ স্থাপন করতে হবে।
 
 ---

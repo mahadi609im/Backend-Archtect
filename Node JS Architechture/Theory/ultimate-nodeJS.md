@@ -153,7 +153,9 @@ console.log(myUrl.searchParams.get('id')); // 5
 - REST API ও Backend সেবা
 - Chat অ্যাপ ও Real-time অ্যাপ
 - ভিডিও বা ডেটা Streaming
-- E-commerce প্ল্যাটফর্ম **পরের প্রশ্ন:** তাহলে Node.js কি সব কাজের জন্য ভালো?
+- E-commerce প্ল্যাটফর্ম
+
+**পরের প্রশ্ন:** তাহলে Node.js কি সব কাজের জন্য ভালো?
   না। কোথায় তার দুর্বলতা?
 
 ---

@@ -71,7 +71,8 @@ Frontend (Browser)  <--- HTTP Response ----  Backend (Server)
 - **Vue**
 - **Angular**
 - **Svelte**
-  > **Frontend-এর কাজ:** ব্যবহারকারীর সামনে সুন্দর UI দেখানো এবং Backend থেকে
+
+> **Frontend-এর কাজ:** ব্যবহারকারীর সামনে সুন্দর UI দেখানো এবং Backend থেকে
   > ডেটা এনে সেটি সাজিয়ে দেখানো।
 
 ---

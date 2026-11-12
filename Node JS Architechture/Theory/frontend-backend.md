@@ -244,8 +244,9 @@ Dynamic ওয়েবসাইট তৈরির দুটি প্রধা
 
 - **React, Vue, Angular** (Frontend)
 - **Next.js** (React-ভিত্তিক Framework, API Based অ্যাপ বানাতে খুব জনপ্রিয়)
-  > **নোট:** Next.js আধুনিক প্রজেক্টে ব্যাপকভাবে ব্যবহৃত হয় এবং এটি API Based ও
-  > Server Side Rendering, দুটি পদ্ধতিই সমর্থন করে।
+
+> **নোট:** Next.js আধুনিক প্রজেক্টে ব্যাপকভাবে ব্যবহৃত হয় এবং এটি API Based ও
+> Server Side Rendering, দুটি পদ্ধতিই সমর্থন করে।
 
 ### সুবিধা
 

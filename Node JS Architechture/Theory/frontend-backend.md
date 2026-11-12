@@ -92,7 +92,9 @@ Frontend (Browser)  <--- HTTP Response ----  Backend (Server)
 Backend অনেক ভাষায় লেখা যায়:
 
 - **JavaScript (Node.js)** ← আমরা এটি শিখছি
-- Python, Java, PHP, Go, C# **Node.js-এর বিশেষ সুবিধা:** Frontend ও Backend দুই
+- Python, Java, PHP, Go, C#
+
+**Node.js-এর বিশেষ সুবিধা:** Frontend ও Backend দুই
   জায়গাতেই একই ভাষা (JavaScript) ব্যবহার করা যায়।
 
 ### HTTP Server

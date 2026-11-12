@@ -201,7 +201,9 @@ if (isMainThread) {
 **সংক্ষেপে:**
 
 - I/O-heavy কাজ = Node.js-এর মূল শক্তি
-- CPU-heavy কাজ = Worker Threads ব্যবহার করো **পরের প্রশ্ন:** একজন বাবুর্চি
+- CPU-heavy কাজ = Worker Threads ব্যবহার করো
+
+**পরের প্রশ্ন:** একজন বাবুর্চি
   (Single Thread) এত অর্ডার সামলায় কীভাবে? এর উত্তর Node.js-এর ভেতরের গঠনে,
   অর্থাৎ তার Dependencies-এ।
 

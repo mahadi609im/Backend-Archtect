@@ -1,5 +1,5 @@
 import fs from 'fs';
-import path, { join } from 'path';
+import path from 'path';
 import type { IProduct } from '../types/product';
 
 const filePath = path.join(process.cwd(), './src/database/db.json');

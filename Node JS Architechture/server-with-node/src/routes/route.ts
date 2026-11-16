@@ -1,4 +1,4 @@
-import { createServer, IncomingMessage, ServerResponse } from 'http';
+import { IncomingMessage, ServerResponse } from 'http';
 import productController from '../controllers/product.controller';
 
 const routerHendler = (req: IncomingMessage, res: ServerResponse) => {

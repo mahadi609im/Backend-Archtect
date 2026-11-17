@@ -3,6 +3,9 @@ import express, {
   type Request,
   type Response,
 } from 'express';
+
+import { Pool } from 'pg';
+
 const app: Application = express();
 const port = 5000;
 
@@ -10,6 +13,12 @@ const port = 5000;
 app.use(express.json());
 app.use(express.text());
 app.use(express.urlencoded({ extended: true }));
+
+const pool = new Pool({
+  connectionString:
+    'postgresql://neondb_owner:npg_3dopKwl4nhAg@ep-dawn-forest-aowyfwov.c-2.ap-southeast-1.aws.neon.tech/neondb?sslmode=require&channel_binding=require',
+});
+console.log(pool);
 
 app.get('/', (req: Request, res: Response) => {
   // res.send('Hello World!');

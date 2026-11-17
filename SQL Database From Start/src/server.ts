@@ -1,4 +1,3 @@
-import e from 'express';
 import express, {
   type Application,
   type Request,
@@ -6,9 +5,9 @@ import express, {
 } from 'express';
 
 import { Pool } from 'pg';
+import config from './config';
 
 const app: Application = express();
-const port = 5000;
 
 //Middleware -> Express can't read the request body by default, so we turn on parsers
 app.use(express.json());
@@ -16,8 +15,7 @@ app.use(express.text());
 app.use(express.urlencoded({ extended: true }));
 
 const pool = new Pool({
-  connectionString:
-    'postgresql://neondb_owner:npg_3dopKwl4nhAg@ep-dawn-forest-aowyfwov.c-2.ap-southeast-1.aws.neon.tech/neondb?sslmode=false&channel_binding=require',
+  connectionString: config.connectionString,
 });
 
 const initDB = async () => {
@@ -207,6 +205,6 @@ app.delete('/api/v1/users/:id', async (req: Request, res: Response) => {
   }
 });
 
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`);
+app.listen(config.port, () => {
+  console.log(`Example app listening on port ${config.port}`);
 });

@@ -1,9 +1,35 @@
-import express from 'express';
-const app = express();
-const port = 3000;
+import express, {
+  type Application,
+  type Request,
+  type Response,
+} from 'express';
+const app: Application = express();
+const port = 5000;
 
-app.get('/', (req, res) => {
-  res.send('Hello World!');
+//Middleware -> Express can't read the request body by default, so we turn on parsers
+app.use(express.json());
+app.use(express.text());
+app.use(express.urlencoded({ extended: true }));
+
+app.get('/', (req: Request, res: Response) => {
+  // res.send('Hello World!');
+  res.status(200).json({
+    success: true,
+    message: 'This is root route',
+    author: 'Maha',
+  });
+});
+
+app.post('/', async (req: Request, res: Response) => {
+  const body = req.body;
+  // const { name, age, password } = req.body;
+
+  res.status(201).json({
+    success: true,
+    message: 'Data created',
+    data: body,
+    // data: { name, age },
+  });
 });
 
 app.listen(port, () => {

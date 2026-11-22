@@ -1,6 +1,7 @@
 import { pool } from '../../db';
+import type { IProfile } from './profile.interface';
 
-const createProfileIntoDB = async (payLoad: any) => {
+const createProfileIntoDB = async (payLoad: IProfile) => {
   const { user_id, bio, address, phone, gender } = payLoad;
 
   const result = await pool.query(

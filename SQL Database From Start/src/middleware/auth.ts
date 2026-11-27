@@ -48,7 +48,7 @@ const auth = (...role: Role[]) => {
       if (!user.rows[0].is_active) {
         return res.status(401).json({
           success: false,
-          message: 'User not found',
+          message: 'User Forbidden',
         });
       }
 

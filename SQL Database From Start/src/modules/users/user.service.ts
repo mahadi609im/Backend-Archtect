@@ -3,15 +3,15 @@ import type { IUpdateUser, IUser } from './user.interface';
 import bcrypt from 'bcryptjs';
 
 const createUserIntoDb = async (payLoad: IUser) => {
-  const { name, age, email, password } = payLoad;
+  const { name, age, email, password, role } = payLoad;
   const hashPassword = await bcrypt.hash(password, 10);
 
   const result = await pool.query(
     `
-    INSERT INTO users (name, age, email, password)
-    VALUES ($1, $2, $3, $4) RETURNING *
+    INSERT INTO users (name, age, email, password, role)
+    VALUES ($1, $2, $3, $4, COALESCE($5, 'user')) RETURNING *
   `,
-    [name, age, email, hashPassword],
+    [name, age, email, hashPassword, role],
   );
 
   delete result.rows[0].password;
@@ -41,7 +41,7 @@ const getSingleUserFromDb = async (id: string) => {
 };
 
 const updateUserFromDB = async (payLoad: IUpdateUser, id: string) => {
-  const { name, age, password, is_active } = payLoad;
+  const { name, age, password, is_active, role } = payLoad;
 
   const result = await pool.query(
     `
@@ -51,10 +51,18 @@ const updateUserFromDB = async (payLoad: IUpdateUser, id: string) => {
       age = COALESCE($2, age),
       password = COALESCE($3, password),
       is_active = COALESCE($4, is_active),
+      role = COALESCE($5, role),
       updated_at = NOW()
-      WHERE id = $5 RETURNING *
+      WHERE id = $6 RETURNING *
     `,
-    [name ?? null, age ?? null, password ?? null, is_active ?? null, id],
+    [
+      name ?? null,
+      age ?? null,
+      password ?? null,
+      is_active ?? null,
+      role ?? null,
+      id,
+    ],
   );
 
   return result;

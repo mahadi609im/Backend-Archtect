@@ -3,6 +3,7 @@ export interface IUser {
   email: string;
   age?: number | null;
   password: string;
+  role: string;
 }
 
 // All fields optional, email removed, is_active added

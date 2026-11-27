@@ -38,7 +38,7 @@ const userLoginIntoDB = async (payLoad: {
   const jwtPayload = {
     id: user.rows[0].id,
     name: user.rows[0].name,
-    password: user.rows[0].password,
+    email: user.rows[0].email,
   };
 
   const accessToken = jwt.sign(jwtPayload, config.tokenSecret, {
